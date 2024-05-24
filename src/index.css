@@ -1,0 +1,150 @@
+
+.to-do-list {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(267deg, skyblue, black, orange);
+    font-family: 'Arial', sans-serif;
+
+  }
+  
+ 
+  .to-do-list h1 {
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+  }
+  
+ 
+  .to-do-list input {
+    width: calc(100% - 100px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .to-do-list input:focus {
+    border-color: #007bff;
+    outline: none;
+  }
+  
+  
+  .add-button,
+  .delete-button,
+  .move-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-button {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .add-button:hover {
+    background-color: #218838;
+  }
+  
+  .delete-button {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .delete-button:hover {
+    background-color: #c82333;
+  }
+  
+  .move-button {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .move-button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* List Styles */
+  .to-do-list ol {
+    padding-left: 20px;
+    list-style: none;
+    margin-top: 20px;
+  }
+  
+  .to-do-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .to-do-list li:hover {
+    background-color: #e9ecef;
+  }
+  
+  .to-do-list .text {
+    flex-grow: 1;
+    font-size: 16px;
+    color: #333;
+    word-break: break-word;
+  }
+  
+ 
+  .delete-button:hover,
+  .move-button:hover {
+    transform: translateY(-1px);
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 600px) {
+    .to-do-list input[type="text"] {
+      width: calc(100% - 90px);
+    }
+  
+    .add-button {
+      margin-left: 5px;
+      padding: 10px;
+    }
+  
+    .to-do-list li {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .delete-button,
+    .move-button {
+      margin-left: 0;
+      margin-top: 5px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .reset-button {
+    padding: 10px 15px;
+    margin-left: 10px;
+    border: none;
+    background-color: #ffc107;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .reset-button:hover {
+    background-color: #e0a800;
+  }
+  
