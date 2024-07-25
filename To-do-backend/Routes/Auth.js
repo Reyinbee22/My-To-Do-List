@@ -11,6 +11,7 @@ router.post('/register', async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
+
         if (!name || !email || !password) {
             return res.status(400).json({ message: 'Please input all fields' });
         }
@@ -21,7 +22,7 @@ router.post('/register', async (req, res) => {
         }
 
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ email, password: hashedPassword });
+        const newUser = new User({ name, email, password: hashedPassword }); // Added name field
         await newUser.save();
 
         res.status(201).json({ message: 'User registered successfully' });
